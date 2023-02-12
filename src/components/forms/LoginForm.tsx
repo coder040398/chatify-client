@@ -1,5 +1,4 @@
-import React from "react";
-import { useForm } from "react-hook-form/dist/useForm";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import {
   Button,
@@ -16,6 +15,7 @@ export default function LoginForm() {
     formState: { errors },
   } = useForm();
 
+  console.log('error', errors);
   const onSubmit = (data: any) => {
     console.log("data", data);
   };
