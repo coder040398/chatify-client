@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Fragment } from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
     <Fragment>
       <Routes>
-        <Route path='/' element={<div>Hello, Home!</div>} />
+        <Route path="/" element={<RegisterPage />}></Route>
         <Route
-          path='conversations'
+          path="conversations"
           element={
             <div>
               <div>Conversation</div>
@@ -15,7 +16,7 @@ function App() {
             </div>
           }
         >
-          <Route path=':id' element={<div>Conversation ID Page</div>} />
+          <Route path=":id" element={<div>Conversation ID Page</div>} />
         </Route>
       </Routes>
     </Fragment>
