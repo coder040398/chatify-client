@@ -4,12 +4,22 @@ export const Button = styled.button`
   width: 100%;
   outline: none;
   border: none;
-  font-family: "Inter";
+  font-family: "Franklin Gothic Medium";
   font-size: 16px;
-  background-color: #2b09ff;
+  background-color: #9900ff;
   color: #fff;
   border-radius: 10px;
   padding: 25px 0;
+  border: 2px solid #9900ff;
+  transition: 250ms background-color ease;
+  transition: 500ms border ease;
+  &:hover {
+    cursor: pointer;
+    background-color: #a217ff;
+  }
+  &:active {
+    background-color: #b240ff;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -21,7 +31,7 @@ export const InputContainer = styled.div`
 `;
 
 export const InputField = styled.input`
-  font-family: "Inter";
+  font-family: "Franklin Gothic Medium";
   background: inherit;
   outline: none;
   border: none;
@@ -37,6 +47,7 @@ export const InputLabel = styled.label`
   color: #8f8f8f;
   font-size: 14px;
   margin: 4px 0;
+  font-family: "Franklin Gothic";
 `;
 
 export const Page = styled.div`
