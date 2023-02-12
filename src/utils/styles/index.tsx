@@ -24,9 +24,39 @@ export const Button = styled.button`
   }
 `;
 
+export const ConversationBarContainer = styled.div``;
+
+export const ConversationBarItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 32px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #5454543d;
+  background-color: #131313;
+`;
+
 export const ConversationChannelPageStyle = styled.div`
   height: 100%;
   margin-left: ${SIDEBAR_WIDTH}px;
+`;
+
+export const ConversationSidebarHeader = styled.header`
+  position: fixed;
+  width: ${SIDEBAR_WIDTH}px;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #151515;
+  height: 100px;
+  justify-content: space-between;
+  border-bottom: 1px solid #5454543d;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+  & h1 {
+    font-weight: 400;
+  }
 `;
 
 export const ConversationSidebarStyle = styled.aside`
@@ -37,17 +67,9 @@ export const ConversationSidebarStyle = styled.aside`
   width: ${SIDEBAR_WIDTH}px;
   background-color: #1a1a1a;
   border-right: 1px solid #5454543d;
-  & header {
-    display: flex;
-    background-color: #151515;
-    height: 100px;
-    justify-content: space-between;
-    border-bottom: 1px solid #5454543d;
-    align-items: center;
-    padding: 0 24px;
-    & h1 {
-      font-weight: 400;
-    }
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
   }
 `;
 
