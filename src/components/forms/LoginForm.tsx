@@ -1,11 +1,13 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { postLoginUser } from "../../utils/api";
 import {
   Button,
   InputContainer,
   InputField,
   InputLabel,
 } from "../../utils/styles";
+import { UserCredentialsParams } from "../../utils/types";
 import styles from "./index.module.scss";
 
 export default function LoginForm() {
@@ -13,11 +15,16 @@ export default function LoginForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<UserCredentialsParams>();
+  const navigate = useNavigate()
 
-  console.log('error', errors);
-  const onSubmit = (data: any) => {
-    console.log("data", data);
+  const onSubmit = async (data: UserCredentialsParams) => {
+    try {
+      await postLoginUser(data);
+      navigate('/conversations')
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
