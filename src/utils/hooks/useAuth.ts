@@ -22,6 +22,7 @@ export function useAuth() {
     return () => {
       controller.abort();
     };
+    // eslint-disable-next-line
   }, []);
 
   return { user, loading };

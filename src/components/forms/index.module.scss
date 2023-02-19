@@ -2,6 +2,10 @@
   margin: 8px 0;
 }
 
+.createConversationForm {
+  width: 100%;
+}
+
 .footerText {
   & :last-child {
     text-decoration: underline;
@@ -17,6 +21,10 @@ form {
 
 .loginFormPassword {
   margin: 8px 0;
+}
+
+.message {
+  margin: 10px 0;
 }
 
 .nameFieldRow {

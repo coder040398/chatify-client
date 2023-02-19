@@ -15,6 +15,7 @@ export default function RegisterForm() {
   const {
     register,
     handleSubmit,
+    // eslint-disable-next-line
     formState: { errors },
   } = useForm<CreateUserParams>();
 

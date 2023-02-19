@@ -8,7 +8,7 @@ export default function ConversationPage() {
   const { id } = useParams();
   return (
     <Page>
-      <ConversationSideBar conversations={mockConversations} />
+      <ConversationSideBar conversations={[]} />
       {!id && <ConversationPannel />}
       <Outlet />
     </Page>

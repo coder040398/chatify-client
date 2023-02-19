@@ -14,6 +14,7 @@ export default function LoginForm() {
   const {
     register,
     handleSubmit,
+    // eslint-disable-next-line
     formState: { errors },
   } = useForm<UserCredentialsParams>();
   const navigate = useNavigate()
